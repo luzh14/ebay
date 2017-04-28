@@ -35,7 +35,3 @@ history = model.fit(train, train_target, nb_epoch=20, batch_size=1000)
 
 loss, accuracy = model.evaluate(train, train_target)
 print("\nLoss: %.2f, Accuracy: %.2f%%" % (loss, accuracy*100))
-
-pred = model.predict(test)
-accuracy = np.mean(np.argmax(pred) == np.argmax(test_target))
-print("Accuracy: %.2f%%" % (accuracy*100))
